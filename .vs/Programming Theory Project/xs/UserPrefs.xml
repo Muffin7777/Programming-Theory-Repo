@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{2ADA6F53-F14B-4B56-C19D-E8DA678BB3AE}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Animal.cs">
+    <Files>
+      <File FileName="Assets/Scripts/FollowPlayer.cs" Line="12" Column="22" />
+      <File FileName="Assets/Scripts/Animal.cs" Line="18" Column="6" />
+      <File FileName="Assets/VoxelAnimals/Assets/Scripts/PlayerController.cs" Line="16" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Programming Theory Project" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7dbd5915-ae35-4384-b488-f3f86954a331" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
