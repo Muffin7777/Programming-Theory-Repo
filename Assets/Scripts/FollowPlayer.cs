@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject player;
-    public Vector3 offset = new Vector3(0,5, -7);
+    private GameObject player;
+    private Vector3 offset = new Vector3(10.7F, 1.43F, 9.47F);
 
+    void Start()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("playerAnimal");
+        player = players[0];
+    }
 
     // Update is called once per frame
     void LateUpdate()

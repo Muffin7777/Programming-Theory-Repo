@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animal : MonoBehaviour
+
+
+public abstract class Animal : MonoBehaviour
 {
-    private Rigidbody animalRigidbody;
+    protected Rigidbody animalRigidbody;
     public bool isOnGround = true;
     public float jumpForce;
-    public float gravityModifier;
     public float speed;
+    protected Animator anim;
     private float forwardInput;
-    Animator anim;
-
+    protected bool sprinting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,6 @@ public class Animal : MonoBehaviour
 
         anim = GetComponent<Animator>();
         animalRigidbody = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityModifier;
     }
 
     // Update is called once per frame
@@ -27,9 +27,10 @@ public class Animal : MonoBehaviour
     {
         Walk();
         Jump();
+        Sprint();
     }
 
-    public void Walk()
+    public virtual void Walk()
     {
         forwardInput = Input.GetAxis("Horizontal");
         transform.Translate(Time.deltaTime * speed * forwardInput * Vector3.forward);
@@ -43,13 +44,13 @@ public class Animal : MonoBehaviour
         }
     }
 
-    public void Jump()
+    public abstract void Jump();
+
+    public virtual void Sprint()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if (sprinting)
         {
-            animalRigidbody.AddForce(Vector3.up*jumpForce, ForceMode.Impulse);
-            anim.SetTrigger("jump");
-            isOnGround = false;
+            anim.SetInteger("Walk", 2);
         }
     }
 
