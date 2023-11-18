@@ -335,7 +335,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 114
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &5416810855613385016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -371,7 +371,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOnGround: 1
   jumpForce: 3
-  speed: 4
+  speed: 150
+  gameRunning: 0
+  finishGame: 0
 --- !u!1 &4928103528509163756
 GameObject:
   m_ObjectHideFlags: 0

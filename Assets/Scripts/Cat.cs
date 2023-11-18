@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Cat : Animal
 {
-    private float normalSpeed;
 
+    // POLYMORPHISM
     public override void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
@@ -16,12 +17,12 @@ public class Cat : Animal
         }
     }
 
+    // POLYMORPHISM
     public override void Sprint()
     {
         if (!sprinting && Input.GetKeyDown(KeyCode.LeftShift) && isOnGround)
         {
-            normalSpeed = speed;
-            this.speed = speed * 4;
+            this.speed = speed * 2;
             sprinting = true;
             StartCoroutine(SprintCountDownRoutine());
         }
@@ -29,8 +30,22 @@ public class Cat : Animal
 
     IEnumerator SprintCountDownRoutine()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
+        this.speed = normalSpeed + (normalSpeed/2);
+        StartCoroutine(SprintSlowDownRoutine());
+    }
+
+    IEnumerator SprintSlowDownRoutine()
+    {
+        yield return new WaitForSeconds(1F);
         this.speed = normalSpeed;
+        StartCoroutine(PausingSprintRoutine());
+    }
+
+    IEnumerator PausingSprintRoutine()
+    {
+        yield return new WaitForSeconds(2F);
         sprinting = false;
     }
+
 }

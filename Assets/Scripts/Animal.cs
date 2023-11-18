@@ -8,33 +8,53 @@ public abstract class Animal : MonoBehaviour
 {
     protected Rigidbody animalRigidbody;
     public bool isOnGround = true;
-    public float jumpForce;
-    public float speed;
+    [SerializeField]
+    public readonly float jumpForce;
+    [SerializeField]
+    public readonly float normalSpeed;
+    public  float speed;
     protected Animator anim;
     private float forwardInput;
     protected bool sprinting = false;
+    public bool gameRunning;
+    public bool finishGame;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        finishGame = false;
+        gameRunning = false;
         anim = GetComponent<Animator>();
         animalRigidbody = GetComponent<Rigidbody>();
+        speed = normalSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Walk();
-        Jump();
-        Sprint();
+        if (gameRunning) {
+            CorrectPosition();
+            Walk();
+            Jump();
+            Sprint();
+        }
     }
 
+    // ABSTRACTION
+    private void CorrectPosition()
+    {
+        if (gameObject.transform.position.y < -0.5F)
+        {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.09F, gameObject.transform.position.z);
+        }
+    }
+
+    // ABSTRACTION
     public virtual void Walk()
     {
         forwardInput = Input.GetAxis("Horizontal");
-        transform.Translate(Time.deltaTime * speed * forwardInput * Vector3.forward);
-        
+        float forwardVel = Time.deltaTime * speed * forwardInput;
+        animalRigidbody.velocity = new Vector3(animalRigidbody.velocity.x, animalRigidbody.velocity.y, forwardVel);
         if (forwardInput != 0 && isOnGround) {
             anim.SetInteger("Walk", 1);
         }
@@ -44,8 +64,10 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     public abstract void Jump();
 
+    // ABSTRACTION
     public virtual void Sprint()
     {
         if (sprinting)
@@ -56,6 +78,16 @@ public abstract class Animal : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGround = true;
+        if (collision == null  || collision.collider == null || !collision.collider.CompareTag("obstacle")) {
+            isOnGround = true;
+        }
+    }
+        private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("goalWall"))
+        {
+            anim.SetInteger("Walk", 0);
+            finishGame = true;
+        }
     }
 }

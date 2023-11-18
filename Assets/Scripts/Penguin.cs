@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Penguin : Animal
 {
     public float secondJumpForce;
@@ -17,9 +18,12 @@ public class Penguin : Animal
         }
         if (walked && released) {
 
-            animalRigidbody.AddForce(Vector3.forward * speed, ForceMode.Impulse);
+            if (animalRigidbody.velocity.z < 300) { 
+                animalRigidbody.AddForce(Vector3.forward * speed, ForceMode.Impulse);
+            }
             released = false;
         }
+    
         if (walked && isOnGround)
         {
             anim.SetInteger("Walk", 1);
@@ -29,6 +33,8 @@ public class Penguin : Animal
             anim.SetInteger("Walk", 0);
         }
     }
+
+
 
     public override void Jump()
     {
@@ -52,8 +58,11 @@ public class Penguin : Animal
 
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGround = true;
-        secondJump = false;
+        if (collision == null || collision.collider == null || !collision.collider.CompareTag("obstacle"))
+        {
+            isOnGround = true;
+            secondJump = false;
+        }
     }
 }
 

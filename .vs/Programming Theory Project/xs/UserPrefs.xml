@@ -1,11 +1,16 @@
 ﻿<Properties StartupConfiguration="{2ADA6F53-F14B-4B56-C19D-E8DA678BB3AE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FollowPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Penguin.cs">
     <Files>
-      <File FileName="Assets/Scripts/FollowPlayer.cs" Line="12" Column="22" />
-      <File FileName="Assets/Scripts/Animal.cs" Line="13" Column="29" />
-      <File FileName="Assets/Scripts/Penguin.cs" Line="20" Column="82" />
-      <File FileName="Assets/Scripts/Cat.cs" Line="5" Column="26" />
-      <File FileName="Assets/Scripts/Chicken.cs" Line="7" Column="31" />
+      <File FileName="Assets/Scripts/PlayManager.cs" Line="65" Column="10" />
+      <File FileName="Assets/Scripts/MainManager.cs" Line="142" Column="32" />
+      <File FileName="Assets/Scripts/FollowPlayer.cs" Line="18" Column="6" />
+      <File FileName="Assets/Scripts/HighScoreUIManager.cs" Line="21" Column="8" />
+      <File FileName="Assets/Scripts/MenuUIManager.cs" Line="76" Column="20" />
+      <File FileName="Assets/Scripts/TitleScreenUIManager.cs" Line="10" Column="39" />
+      <File FileName="Assets/Scripts/Cat.cs" Line="41" Column="48" />
+      <File FileName="Assets/Scripts/Chicken.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/Animal.cs" Line="31" Column="24" />
+      <File FileName="Assets/Scripts/Penguin.cs" Line="19" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +18,7 @@
           <Node name="Programming Theory Project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="FollowPlayer.cs" selected="True" />
+                <Node name="Penguin.cs" selected="True" />
               </Node>
               <Node name="VoxelAnimals" expanded="True">
                 <Node name="Assets" expanded="True">
@@ -28,7 +33,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="32361224-fed7-4272-9a31-104e2aa31be4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="595f2281-61a0-4039-9fe9-6351f31133b7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

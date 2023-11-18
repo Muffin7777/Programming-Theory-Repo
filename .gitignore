@@ -6,3 +6,5 @@ Temp/
 *.csproj
 .vsconfig
 .DS_Store
+Assets/Dynamic Music/
+Assets/Pure Poly/
