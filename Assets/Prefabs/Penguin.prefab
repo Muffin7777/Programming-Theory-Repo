@@ -204,10 +204,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOnGround: 1
   jumpForce: 7
-  speed: 4
+  speed: 3
   gameRunning: 0
   finishGame: 1
-  secondJumpForce: 4
+  secondJumpForce: 5
 --- !u!1 &4571087730772492457
 GameObject:
   m_ObjectHideFlags: 0

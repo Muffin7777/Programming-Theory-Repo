@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOnGround: 1
   jumpForce: 3
-  speed: 150
+  speed: 200
   gameRunning: 0
   finishGame: 0
 --- !u!1 &4928103528509163756

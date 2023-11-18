@@ -24,7 +24,7 @@ public class Cat : Animal
         if (!sprinting && Input.GetKeyDown(KeyCode.LeftShift) && isOnGround)
         {
             normalSpeed = speed;
-            this.speed = speed * 2;
+            this.speed = speed * 3;
             sprinting = true;
             StartCoroutine(SprintCountDownRoutine());
         }
@@ -33,7 +33,7 @@ public class Cat : Animal
     IEnumerator SprintCountDownRoutine()
     {
         yield return new WaitForSeconds(2);
-        this.speed = normalSpeed + (normalSpeed/2);
+        this.speed = normalSpeed *2;
         StartCoroutine(SprintSlowDownRoutine());
     }
 
@@ -46,7 +46,7 @@ public class Cat : Animal
 
     IEnumerator PausingSprintRoutine()
     {
-        yield return new WaitForSeconds(2F);
+        yield return new WaitForSeconds(5F);
         sprinting = false;
     }
 

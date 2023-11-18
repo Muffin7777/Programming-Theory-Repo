@@ -9,6 +9,7 @@ public class Penguin : Animal
     private bool secondJump = false;
     private bool released = true;
 
+    // POLYMORPHISM
     public override void Walk()
     {
         bool walked = Input.GetKeyDown(KeyCode.RightArrow);
@@ -35,7 +36,7 @@ public class Penguin : Animal
     }
 
 
-
+    // POLYMORPHISM
     public override void Jump()
     {
         float forceForThisJump = jumpForce;
