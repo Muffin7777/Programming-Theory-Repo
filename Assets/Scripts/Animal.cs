@@ -8,11 +8,8 @@ public abstract class Animal : MonoBehaviour
 {
     protected Rigidbody animalRigidbody;
     public bool isOnGround = true;
-    [SerializeField]
-    public readonly float jumpForce;
-    [SerializeField]
-    public readonly float normalSpeed;
-    public  float speed;
+    public float jumpForce;
+    public float speed;
     protected Animator anim;
     private float forwardInput;
     protected bool sprinting = false;
@@ -26,7 +23,6 @@ public abstract class Animal : MonoBehaviour
         gameRunning = false;
         anim = GetComponent<Animator>();
         animalRigidbody = GetComponent<Rigidbody>();
-        speed = normalSpeed;
     }
 
     // Update is called once per frame

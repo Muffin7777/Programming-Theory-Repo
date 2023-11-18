@@ -35,7 +35,7 @@ public class TitleScreenUIManager : MonoBehaviour
             NameTooLongText.SetActive(true);
             return;
         }
-        MainManager.Instance.Playername = nameInput;
+        MainManager.Instance.setPlayerName(nameInput);
         SceneManager.LoadScene(1);
     
     }

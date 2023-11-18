@@ -319,4 +319,9 @@ public class MainManager : MonoBehaviour
         return best;
     }
 
+    public void setPlayerName(string value)
+    {
+        Playername = value;
+    }
+
 }

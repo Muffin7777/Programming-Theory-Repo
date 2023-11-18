@@ -5,6 +5,7 @@ using UnityEngine;
 // INHERITANCE
 public class Chicken : Animal
 {
+    private float normalSpeed;
 
     // POLYMORPHISM
     public override void Jump()
@@ -24,6 +25,7 @@ public class Chicken : Animal
     {
         if (!sprinting && Input.GetKeyDown(KeyCode.LeftShift) && isOnGround)
         {
+            normalSpeed = speed;
             this.speed = speed  + (speed/2);
             sprinting = true;
             StartCoroutine(SprintCountDownRoutine());

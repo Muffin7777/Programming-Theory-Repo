@@ -1,32 +1,21 @@
 ﻿<Properties StartupConfiguration="{2ADA6F53-F14B-4B56-C19D-E8DA678BB3AE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Penguin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayManager.cs" Line="65" Column="10" />
-      <File FileName="Assets/Scripts/MainManager.cs" Line="142" Column="32" />
+      <File FileName="Assets/Scripts/PlayManager.cs" Line="91" Column="1" />
       <File FileName="Assets/Scripts/FollowPlayer.cs" Line="18" Column="6" />
-      <File FileName="Assets/Scripts/HighScoreUIManager.cs" Line="21" Column="8" />
-      <File FileName="Assets/Scripts/MenuUIManager.cs" Line="76" Column="20" />
-      <File FileName="Assets/Scripts/TitleScreenUIManager.cs" Line="10" Column="39" />
-      <File FileName="Assets/Scripts/Cat.cs" Line="41" Column="48" />
-      <File FileName="Assets/Scripts/Chicken.cs" Line="37" Column="1" />
-      <File FileName="Assets/Scripts/Animal.cs" Line="31" Column="24" />
-      <File FileName="Assets/Scripts/Penguin.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/HighScoreUIManager.cs" Line="71" Column="19" />
+      <File FileName="Assets/Scripts/MenuUIManager.cs" Line="53" Column="35" />
+      <File FileName="Assets/Scripts/TitleScreenUIManager.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scripts/Cat.cs" Line="46" Column="6" />
+      <File FileName="Assets/Scripts/Chicken.cs" Line="26" Column="10" />
+      <File FileName="Assets/Scripts/Animal.cs" Line="12" Column="34" />
+      <File FileName="Assets/Scripts/Penguin.cs" Line="39" Column="20" />
+      <File FileName="Assets/Scripts/MainManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Programming Theory Project" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="Penguin.cs" selected="True" />
-              </Node>
-              <Node name="VoxelAnimals" expanded="True">
-                <Node name="Assets" expanded="True">
-                  <Node name="Scripts" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="Programming Theory Project" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
